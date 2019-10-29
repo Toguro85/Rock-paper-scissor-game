@@ -30,24 +30,59 @@ section{
 
 .intro{
   color: rgb(166,166,166);
-  height: 40vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  opacity: 0;
 }
 
 .intro h1{
   font-size: 50px;
 }
 
-.intro button{
+.intro button, .match button{
   background: none;
   color: rgb(166,166,166);
   border: none;
   width: 150px;
   height: 50px;
   font-size: 25px;
-  background: rgb(150,100,100);
+  background: rgb(45,100,100);
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.match{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.winner{
+  color: rgb(166,166,166);
+  text-align: center;
+  font-size: 50px;
+}
+
+.hands, .options{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player-hand{
+  transform: rotateY(180deg);
+}
+
+.div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.div.fadeIn{
+  opacity: 1;
+  pointer-events: all;
 }
