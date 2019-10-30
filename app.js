@@ -18,6 +18,16 @@ const game = () =>{
     const playerHand = document.querySelector(".player-hand");
     const computerHand = document.querySelector(".computer-hand");
     const hands = document.querySelectorAll(".hands img");
+    const reset = document.querySelector(".reset button");
+
+    //reset score
+    reset.addEventListener("click",() =>{
+      pScore = 0;
+      cScore = 0;
+      updateScore();
+      playerHand.src = `./assets/rock.png`;
+      computerHand.src = `./assets/rock.png`; 
+    });
 
     hands.forEach(hand=>{
       hand.addEventListener("animationend", function() {
@@ -38,7 +48,7 @@ const game = () =>{
 
           //Update images
           playerHand.src = `./assets/${this.textContent}.png`;
-          computerHand.src = `./assets/${computerChoice}.png`;  
+          computerHand.src = `./assets/${computerChoice}.png`;
         },2000);
 
         //Animation

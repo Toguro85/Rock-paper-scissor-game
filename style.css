@@ -42,7 +42,7 @@ section{
   font-size: 50px;
 }
 
-.intro button, .match button{
+.intro button, .match button,.reset button{
   background: none;
   color: rgb(166,166,166);
   border: none;
@@ -60,6 +60,16 @@ section{
   left: 50%;
   transform: translate(-50%,-50%);
   transition: opacity 0.5s ease 0.5s;
+}
+
+.reset{
+   padding: 20px;
+   display: flex;
+   transition: opacity 0.5s ease 0.5s;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+
 }
 
 .winner{
